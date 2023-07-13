@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <form asp-controller="Home" asp-action="TestCaptcha" method="post">
+        <dnt-captcha asp-captcha-generator-max="30"
+                     asp-captcha-generator-min="1"
+                     asp-captcha-generator-language="Persian"
+                     asp-captcha-generator-display-mode="SumOfTwoNumbers"
+                     asp-use-relative-urls="true"
+                     asp-placeholder="Security code as a number"
+                     asp-validation-error-message="Please enter the security code as a number."
+                     asp-font-size="20"
+                     asp-fore-color="#333333"
+                     asp-back-color="#FCF6F5FF"
+                     asp-text-box-class="form-control"
+                     asp-text-box-template="<div class='input-group'><span class='input-group-text'><span class='bi-lock'></span></span>{0}</div>"
+                     asp-validation-message-class="text-danger"
+                     asp-refresh-button-class="bi-arrow-counterclockwise btn-lg"
+                     asp-show-refresh-button="true"
+                     asp-dir="ltr" />
+
+        <button type="submit">Save</button>
+    </form>
+</div>
